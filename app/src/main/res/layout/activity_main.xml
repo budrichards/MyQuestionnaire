@@ -15,9 +15,9 @@
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                 android:allowUndo="true"
                 android:cursorVisible="true"
                 android:hint="Answer 1"
-                android:inputType="text" />
+                android:inputType="number"/>
 
             <TextView
                 android:id="@+id/question2"
@@ -100,34 +100,34 @@
             <TextView
                 android:id="@+id/question4"
                 style="@style/HeaderTextStyle"
-                android:text="4) Which of the following wars/ conflict was the longest and shortest?" />
+                android:text="4) Which of the following wars/ conflict was the longest and shortest?"/>
 
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/checkBox1"
                 style="@style/CheckBox"
                 android:text="WW1"
-                app:buttonTint="@android:color/background_light" />
+                app:buttonTint="@android:color/background_light"/>
 
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/checkBox2"
                 style="@style/CheckBox"
                 android:text="Vietnam Conflict"
                 app:buttonTint="@android:color/background_light"/>
 
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/checkBox3"
                 style="@style/CheckBox"
                 android:text="Korean War"
-                app:buttonTint="@android:color/background_light" />
+                app:buttonTint="@android:color/background_light"/>
 
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/checkBox4"
                 style="@style/CheckBox"
                 android:text="Gulf War"
                 app:buttonTint="@android:color/background_light"/>
 
             <TextView
-                android:id="@+id/question5"
+                android:id="@+id/whoIs"
                 style="@style/HeaderTextStyle"
                 android:text="5) Who is the current Commander in Chief?"/>
 
@@ -137,12 +137,13 @@
                 android:allowUndo="true"
                 android:cursorVisible="true"
                 android:hint="Answer 5"
-                android:inputType="text" />
+                android:inputType="textCapWords"/>
 
             <Button
                 android:id="@+id/button4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="submitAnswers"
                 android:paddingBottom="6dp"
                 android:text="Submit"/>
 

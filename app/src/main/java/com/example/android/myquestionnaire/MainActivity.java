@@ -1,17 +1,14 @@
 package com.example.android.myquestionnaire;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
 import android.view.View;
-import java.lang.String.*;
-import android.widget.Button;
-import android.widget.RadioButton;
-import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
-import static android.R.id.input;
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -22,32 +19,42 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public boolean onEditTextField( char input1[] ){
-        char answer[] = {'1','7','7','5'};
-        boolean outPut = input1.contentEquals(answer);
+    public void editText (View view) {
+        EditText editText = (EditText) findViewById(R.id.question1);
+        editText.getText().toString().equals("1775");
+        if (question1 == 1775) {
+            Toast.makeText(this, "Answer is correct", Toast.LENGTH_SHORT).show();
+        }
 
+        Toast.makeText(this, "Answer is incorrect", Toast.LENGTH_SHORT).show();
 
     }
 
 
-    /** called when he user clicks a radio button
-     *
-     * @param view
-     */
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
 
         // Check which radio button was clicked
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.radio_true:
                 if (checked)
-                    // True
+                    Toast.makeText(this, "Answer is incorrect", Toast.LENGTH_SHORT).show();
                     break;
+        }
+
+        switch (view.getId()) {
             case R.id.radio_false:
                 if (checked)
-                    // False
+                    Toast.makeText(this, "Answer is correct", Toast.LENGTH_SHORT).show();
                     break;
         }
     }
+
+    public void editText (View view) {
+        EditText editText = (EditText) findViewById(R.id.question5);
+        editText.getText().toString().equalsIgnoreCase("Donald Trump");
+    }
+
+
 }
